@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.banner{
+    background-image: url("https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+.navbar{
+    width: 100%;
+    height: 4.5rem;
+    background-color: #5252ec;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+}
+.logo{
+    width: 10rem;
+}
+.logo img{
+    width: 80%;
+}
+.nav_item{
+    width: 80%;
+}
+.nav_item ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.nav_item ul li{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    position: relative;
+    cursor: pointer;
+}
+.nav_item ul li::before{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: white;
+    bottom: -10px;
+    border-radius: 8px;
+    transition: .3s ease-in-out;
+}
+.nav_item ul li:hover::before{
+    width: 100%;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Responsive nav */
+.toggle{
+    margin-right: 30px;
+    display: none;
+}
+.toggle .bar{
+    width: 30px;
+    background-color: white;
+    margin-top: 5px;
+    padding: 1.5px;
+}
+
+.resp_nav{
+    width: -20rem;
+    background-color: #5252ec;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    text-align: center;
+    padding: 10px;
+    display: none;
+    transition: .3s ease-in-out;
+}
+.resp_nav ul{
+    list-style: none;
+    display: block;
+}
+.resp_nav ul li{
+    padding: 10px 0;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive nav */
+
+@media screen and (max-width:768px) {
+    .toggle{
+        display: block;
+    }
+    .resp_nav{
+        display: block;
+        width: 20rem;
+        transition: .3s ease-in-out;
+    }
+    .nav_item{
+        display: none;
+    }
+}
